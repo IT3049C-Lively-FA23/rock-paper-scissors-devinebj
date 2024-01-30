@@ -16,20 +16,20 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-  scoreParagraph.textContext = `${game.username}: ${game.score.user} v CPU: ${game.score.cpu}`;
+  scoreParagraph.textContent = `${game.username}: ${game.score.user} v CPU: ${game.score.cpu}`;
 }
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
-  gameHistoryParagraph.textContext = '';
+  gameHistoryParagraph.innerHTML = '';
   game.gameHistoryLog.forEach(entry => {
-    gameHistoryParagraph.textContext += entry + '\n'
+    gameHistoryParagraph.innerHTML += entry + "<br>";
   });
 }
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
-  const username = userName.nodeValue;
+  const username = userName.value;
   game = new RockPaperScissors(username);
   welcomeScreen.classList.add('d-none');
   gameScreen.classList.remove('d-none');
@@ -38,7 +38,7 @@ startGameButton.addEventListener(`click`, function () {
 
 // go-button EventListener
 goButton.addEventListener(`click`, function () {
-  const userChoice = userSelection.nodeValue;
+  const userChoice = userSelection.value;
   game.play(userChoice);
   updateScoreTallyUI();
   updateGameHistoryUI();

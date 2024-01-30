@@ -60,8 +60,5 @@ class RockPaperScissors {
 
     const roundSummary = `User (${userSelection}) vs CPU (${cpuSelection}): ${result.toUpperCase()}`; 
     this.gameHistoryLog.push(roundSummary);
-
-
-    return result;
   }
 }
