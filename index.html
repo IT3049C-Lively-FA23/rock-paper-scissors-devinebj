@@ -15,27 +15,27 @@
         <!-- WORK FROM INSIDE THIS CONTAINER-->
         <h1>Rock Paper Scissors</h1>
         <div id="welcome-screen">
-            <form id="game-form">
+            <form id="game-form" class="form-group">
                 <div>
                     <label for="username">Your Name:</label>
                     <input id="username" name="username" placeholder="Enter Name Here...">
-                    <button id="start-game-button">Start Game!</button>
+                    <button type="button" id="start-game-button" class="btn btn-primary">Start Game!</button>
                 </div>
             </form>
         </div>
         <div id="game-screen">
             <div id="score-tally">
                 <p id="score">User: 0 v CPU: 0</p>
-                <form id="game-form">
+                <form id="game-form" class="form-group">
                     <div>
                         <label for="user-selection">Select your choice: </label>
-                        <select id="user-selection" name="user-selection">
+                        <select class="custom-select" id="user-selection" name="user-selection">
                             <option value="rock">Rock</option>
                             <option value="paper">Paper</option>
                             <option value="scissors">Scissors</option>
                         </select>
                     </div>
-                    <button id="go-button">Go!</button>
+                    <button type="button" id="go-button" class="btn btn-success">Go!</button>
                     <p id="game-history"></p>
                 </form>
             </div>
